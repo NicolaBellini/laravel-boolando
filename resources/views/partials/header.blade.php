@@ -10,10 +10,14 @@
 
       </div>
       <div class="center">
-        <img src="{{Vite::}}" alt="" />
+        <img src="{{Vite::asset('resources/img/boolean-logo.png')}}" alt="" />
       </div>
-      <div class="rigth">
-        <div v-for="(item, index) in icons" :key="index" v-html="item"></div>
+      <div class="rigth d-flex ">
+        @foreach (config('menues.icons') as $icon)
+
+       <i class="{{ $icon['text'] }}"></i>
+
+        @endforeach
       </div>
     </div>
   </div>
