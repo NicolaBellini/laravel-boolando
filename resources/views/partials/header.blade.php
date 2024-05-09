@@ -3,9 +3,13 @@
     <div class="container">
       <div class="left">
         <ul>
-            <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('product') }}">Prodotti</a></li>
-            <li><a href="{{ route('about') }}">Chi Siamo</a></li>
+            @foreach (config('menues.menu') as $item)
+
+            <li><a class="{{ Route::currentRouteName() ===  $item['view'] ? 'active' : '' }}"
+                 href="{{ route($item['view']) }}">{{ $item['name'] }}</a></li>
+
+            @endforeach
+
         </ul>
 
       </div>

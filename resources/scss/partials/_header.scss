@@ -9,18 +9,22 @@ header {
     z-index: 999;
     .wrapper {
         height: 100%;
+        display: flex;
+        justify-content: center;
         .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             height: 100%;
+            width: 100%;
 
             .left {
                 height: 100%;
                 display: flex;
                 align-items: center;
+                width: 33%;
                 ul {
                     margin: 0;
                     padding: 0;
@@ -28,14 +32,18 @@ header {
 
                     li {
                         display: inline-block;
-                        margin-right: 20px;
+                        gap: 40px;
 
                         a {
                             color: inherit;
+                            gap: 40px;
                             text-decoration: none;
 
                             &:hover {
                                 text-decoration: underline;
+                            }
+                            &.active {
+                                color: grey;
                             }
                         }
                     }
@@ -43,6 +51,7 @@ header {
             }
 
             .center {
+                width: 33%;
                 img {
                     max-width: 100px;
                     height: auto;
@@ -50,7 +59,9 @@ header {
             }
 
             .right {
-                // Stili per il lato destro, se necessario
+                width: 33%;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

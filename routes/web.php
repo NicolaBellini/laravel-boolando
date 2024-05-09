@@ -23,9 +23,6 @@ Route::get('/', function () {
 Route::get('/Prodotti', function () {
     $products= config('product');
 
-
-
-
     return view('product', compact('products'));
 })->name('product');
 

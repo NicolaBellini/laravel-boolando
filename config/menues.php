@@ -16,15 +16,15 @@ return [
     'menu' => [
         [
             'name' => 'Home',
-            'url' => '/',
+            'view' => 'home',
         ],
         [
             'name' => 'Prodotti',
-            'url' => '/products',
+            'view' => 'product',
         ],
         [
             'name' => 'Chi Siamo',
-            'url' => '/about-us',
+            'view' => 'about',
         ],
     ],
 ];
