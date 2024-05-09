@@ -5,12 +5,12 @@
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('product') }}">Prodotti</a></li>
-            <li><a href="{{ route('home') }}">Chi Siamo</a></li>
+            <li><a href="{{ route('about') }}">Chi Siamo</a></li>
         </ul>
 
       </div>
       <div class="center">
-        <img src="" alt="" />
+        <img src="{{Vite::}}" alt="" />
       </div>
       <div class="rigth">
         <div v-for="(item, index) in icons" :key="index" v-html="item"></div>

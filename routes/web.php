@@ -23,17 +23,18 @@ Route::get('/', function () {
 Route::get('/Prodotti', function () {
     $products= config('product');
 
-    $newProducts = [];
 
-        foreach ($products as $product) {
-        $newProduct = $product;
-        $newProduct['badges'][] = [
-            'type' => '',
-            'value' => '',
-        ];
-        $newProducts[] = $newProduct;
-    }
 
 
     return view('product', compact('products'));
 })->name('product');
+
+
+Route::get('/chi-siamo', function () {
+
+
+
+
+
+    return view('about');
+})->name('about');
