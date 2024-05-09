@@ -8,9 +8,15 @@
 @import "./partials/footer";
 @import "./partials/header";
 @import "./partials/main";
+@import "./partials/home";
+
 @import "./partials/products";
 img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+main {
+    padding-top: 60px;
 }

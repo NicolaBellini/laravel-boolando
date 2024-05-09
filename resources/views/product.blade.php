@@ -13,12 +13,8 @@
                 :key="index"
             >
                     <div class="card-image">
-                       <img src="{{ asset('img/' . $product['frontImage']) }}" alt="" />
-                          <img
-                           src="{{ asset('img/' . $product['backImage']) }}"
-                            alt=""
-                            class="hovered-image"
-                        />
+                        <img src="{{ Vite::asset("resources/img/1.webp") }}" alt="" class="hovered-image" />
+                         <img src="{{ Vite::asset("resources/img/1.webp") }}" alt="" class="hovered-image" />
 
                         <div class="tag">
                         <!-- applico la classe sostenibilità solo se il .value è uguale a sostenibilità -->

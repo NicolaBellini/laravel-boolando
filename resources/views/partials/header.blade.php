@@ -1,29 +1,21 @@
-<header class="bg-dark text-warning ">
-   <h2></h2>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
+<header >
+   <div class="wrapper">
+    <div class="container">
+      <div class="left">
+        <ul>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('product') }}">Prodotti</a></li>
+            <li><a href="{{ route('home') }}">Chi Siamo</a></li>
+        </ul>
 
-            </ul>
-            </div>
-        </div>
-    </nav>
-   <ul>
-     <li><a class="{{ Route::currentRouteName() === 'home' ? 'active' : '' }}" href="{{ route('home') }}">home</a></li>
-     <li><a class="{{ Route::currentRouteName() === 'product' ? 'active' : '' }}" href="{{ route('product') }}">Prodotti</a></li>
-   </ul>
+      </div>
+      <div class="center">
+        <img src="" alt="" />
+      </div>
+      <div class="rigth">
+        <div v-for="(item, index) in icons" :key="index" v-html="item"></div>
+      </div>
+    </div>
+  </div>
+
 </header>
