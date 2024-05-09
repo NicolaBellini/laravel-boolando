@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('home')
+@section('content')
 <main class="bg-light">
     <div class="container">
         <h1>home</h1>
