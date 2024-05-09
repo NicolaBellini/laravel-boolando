@@ -3,7 +3,7 @@
 
 
 <main class="bg-light">
-    <div class="container d-flex flex-wrap">
+    <div class="container justify-content-center  d-flex flex-wrap">
 
         @foreach ($products as $product)
 
@@ -13,7 +13,7 @@
                 :key="index"
             >
                     <div class="card-image">
-                        <img src="../../public/img/{{$product['frontImage']}}" alt="" />
+                       <img src="{{ asset('img/' . $product['frontImage']) }}" alt="" />
 
                     </div>
                     <div class="tag">
