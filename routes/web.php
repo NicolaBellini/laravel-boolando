@@ -21,7 +21,19 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/Prodotti', function () {
-
     $products= config('product');
+
+    $newProducts = [];
+
+        foreach ($products as $product) {
+        $newProduct = $product;
+        $newProduct['badges'][] = [
+            'type' => '',
+            'value' => '',
+        ];
+        $newProducts[] = $newProduct;
+    }
+
+
     return view('product', compact('products'));
 })->name('product');

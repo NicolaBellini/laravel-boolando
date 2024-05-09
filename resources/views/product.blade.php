@@ -24,21 +24,11 @@
 
                     <div class="tag">
                     <!-- applico la classe sostenibilità solo se il .value è uguale a sostenibilità -->
-                        <div
-                            class="badge"
-                           class="{{ $product['badges'][0]['value'] === 'Sostenibilità' ? 'sost' : 'discount' }}"
-
-                        >
-                            {{ $product['badges'][0]['value'] }}
-                        </div>
-                        <!-- applico la classe discount o una stringa vuota se il value è diverso da sostenibilità o striga vuota -->
-                        {{-- <div
-                            class="badge"
-                           class="{{ $product['badges'][1]['value'] === 'Sostenibilità' ? 'sost' : 'discount' }}"
-
-                        >
-                            {{ $product['badges'][1]['value'] }}
-                        </div> --}}
+                        @foreach($product['badges'] as $badge)
+                            <div class="badge {{ $badge['value'] === 'Sostenibilità' ? 'sost' : 'discount' }}">
+                                {{ $badge['value'] }}
+                            </div>
+                        @endforeach
                     </div>
                     <div class="liked"  onclick="$set($product['isInFavorites'], !$product['isInFavorites'])"  >
                         <div>
