@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
+
+
     return view('home');
 })->name('home');
 
-Route::get('/chi-siamo', function () {
-    return view('about');
-})->name('about');
+Route::get('/Prodotti', function () {
+
+    $products= config('product');
+    return view('product', compact('products'));
+})->name('product');
